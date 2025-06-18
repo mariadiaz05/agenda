@@ -37,7 +37,7 @@ function agregarContacto(e) {
 
 fetch(API_URL, {
   method: 'POST',
-  body: JSON.stringify(nuevo) // ¡Sin headers!
+  body: JSON.stringify(nuevo) 
 })
 .then(res => {
   if (res.ok) {
@@ -52,8 +52,8 @@ fetch(API_URL, {
 
 }
 
-// Asignar eventos
+
 document.getElementById('contactForm').addEventListener('submit', agregarContacto);
 
-// Cargar contactos al iniciar
+
 cargarContactos();
